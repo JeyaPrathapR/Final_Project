@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+<title>JPN Cart Order Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+  
+<style>
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jpbordering{
+border:3px solid blue;
+border-radius: 15px;
+box-shadow: 0px 5px 28px skyblue inset;
+}
+
+.priyabordering{
+border:3px solid pink;
+border-radius: 15px;
+box-shadow: 0px 5px 28px #E94988 inset;
+}
+
+.naveenbordering{
+border:3px solid red;
+border-radius: 15px;
+box-shadow: 0px 5px 28px #F34E2B inset;
+}
+
+.font_size{
+font-size:30px;
+}
+
+.alignment{
+text-align:right;
+}
+
+</style>  
+</head>
+
+
+
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+  <!-- Brand -->
+  <h1 class="navbar-brand">JPN Cart Product Management</h1>
+
+  <!-- Toggler/collapsible Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/index}">Index</a>
+      </li>
+       <li sec:authorize="isAuthenticated()"><a class="nav-link" th:href="@{/logout}">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="text-center">ABOUT US</h1>
+
+<br>
+
+<br>
+
+
+<div class="container-fluid">
+
+<div class="row" style="height:100px">
+
+<div class="col-lg-12">
+
+<p class="font_size">This project has two modules, which are Product Management and Order Management. The JPN cart named based on our initial letters. we are the people who created this project.</p>
+
+</div>  
+
+</div>
+
+</div><br>
+
+<div class="container-fluid">
+  <div class="row" style="height:400px">
+    <div class="col-lg-4 jpbordering">
+   <img src="images/jp.jpg" class="rounded-circle" alt="Jeyaprathap" height="350"> <br>
+   <p class="text-center font_size"><b>J</b>eyaprathap, <b>BE(CSE)..,</b><p>
+    </div>
+    <div class="col-lg-4 priyabordering">
+ <img src="images/priya.jpg" class="rounded-circle" alt="Jeyaprathap" height="350"> <br>
+ <p class="text-center font_size"><b>P</b>riyanka Taware, <b>Bsc(CS)..,</b><p>
+    </div>
+     <div class="col-lg-4 naveenbordering">
+  <img src="images/naveen.jpg" class="rounded-circle" alt="Jeyaprathap"  height="350"><br>
+  <p class="text-center font_size"><b>N</b>aveen Kumar, <b>BTech(CS)..,</b><p>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<h2>Why We Created This Project?</h2>
+
+<div>
+
+<p style="font-size:20px">The project JPN Cart is developed with the objective of making the system reliable, easier, fast, and more informative. 
+There is a lot of reason for the introduction of this project. When we want to know about availability of products we need 
+Large records-books have to be maintained where relevant and irrelevant information has to be stored which is very untidy and clumsy process. 
+But our System reduces paper works. On the other hand, there are many inherent problems that exist in any manual system. 
+Usually, they lack efficiency. Less efficiency has a great impact on the productivity of any human being keeping the data. 
+There is security feature added in our project it will help us to login with securely, and there is options for add new, update, 
+delete, and fetching all the available products in this system. Also this system have Order Management system which is helps you to order items
+and calculate the items via their quantity.</p>
+
+
+</div>   <br>
+
+<div class="font_size priyabordering" style="height:100px">
+
+<marquee>THANKYOU FOR VISITING OUR WEBSITE COME BACK AGAIN LATER</marquee>
+ 
+</div>
+
+</body>
+
+</html>
